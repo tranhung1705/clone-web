@@ -1,0 +1,474 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*
+1: vị trí
+2: kích thước
+3: màu sắc
+4: kiểu dáng ( kiểu chữ, hình tròn, vuông...)
+*/
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-center {
+    text-align: center;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: 32px;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+.col-third {
+    width: 33.3333%;
+}
+.col-halt {
+    width: 50%;
+}
+.col-full {
+    width: 100%;
+}
+
+/*main*/
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 30px;
+    display: inline-block;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li:hover {
+    color: #000;
+}
+#nav li:hover .dupnav {
+    display: block;
+}
+#nav > li:hover > a {
+    background-color: #ccc;
+}
+#nav .dupnav li:hover {
+    background-color: #ccc;
+    width: 100%;
+
+}
+#nav .dupnav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    top: 100%;
+    left: 0px;
+    box-shadow: 0 0 10px, rgba(0, 0, 0, 0.5);
+    
+}
+#nav .dupnav a {
+    color: black;
+    padding: 0 12px;
+}
+#header .down {
+    font-size: 14px;
+}
+#header .search-btn {
+    float: right;
+    line-height: 50px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+}
+#header .search-btn:hover {
+    background-color: #f44336;
+    height: 100%;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url("/assets/img/slider/slider1.jpg") top center / cover no-repeat;
+
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 40px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+#slider .text-heading {
+    letter-spacing: 4px;
+
+}
+#slider .text-description {
+    margin-top: 25px;
+}
+#content {
+    
+}
+#content .content-0 {
+    width: 800px;
+    height: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    
+}
+#content .content-1 {
+    font-size: 30px;
+    margin-left: 315px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    
+
+}
+#content .content-2 {
+    margin-left: 345px;   
+    font-size: 15px;
+    margin-top: 30px;
+    font-style: italic;
+    opacity: 0.6;
+
+}
+#content .content-3 {
+    margin-top: 30px;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+#content .membername {
+    font-size: 15px;
+    margin-bottom: 15px;
+
+}
+#content .member-img {
+    width: 154px;
+    border-radius: 4px;
+}
+#content .tour-section {
+    width: 100%;
+    height: 845px;
+    background-color: black;
+    text-align: center;
+   
+
+}
+#content .content-tour1 {
+
+    width: 800px;
+    height: 845px;   
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+#content .content-tour2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 4px;
+
+}
+
+#content .content-tour3 {
+    font-size: 15px;
+    color: white;
+    font-style: italic;
+    margin-top: 35px;
+    opacity: 0.6;
+
+}
+#content .tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+    
+}
+#content .tickets-list > li {
+    
+    text-align: left;
+}
+#content .tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    list-style-type: none;
+
+}
+#content .tickets-list .sold-out {
+    margin-left: 16px;
+    background-color: red;
+    padding: 3px 4px;
+    color: white;
+    
+}
+#content .tickets-list .quantity {
+    float: right;
+    margin-right: 24px;
+    background-color: black;
+    color: white;
+    width: 24px;
+    height: 22px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -3px;
+}
+
+
+#content .place-img {
+    width: 100%;
+    display: block;
+}
+#content .place-body {
+    background-color: #fff;
+    line-height: 1.4;
+    padding: 0.15px 16px;
+    text-align: left;
+    height: 204px;   
+}
+#content .place-heading {
+    margin-top: 12px;
+    opacity: 0.9;
+
+}
+#content .place-time {
+    margin: 15px 0;
+    opacity: 0.6;
+
+}
+#content .place-img:hover {
+    opacity: 0.9;
+}
+#content .place-desc {
+    margin-bottom: 31px;
+    
+}
+.place-buy-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#content .place-body:hover  button {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+#content .place-body button {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 8px 8px;
+    border: none;
+}
+#content .contact-tour1 {
+    color: #000;
+    text-align: center;
+    padding: 64px 16px;
+}
+#content .contact-section {
+    width: 800px;
+    height: 458px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#content .contact-tour2 {
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+}
+#content .contact-tour3 {
+    font-size: 15px;
+    opacity: 0.6;
+    font-style: italic;
+    margin-bottom: 82px;
+
+}
+
+#footer {
+
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.modal.open {
+    display: flex;
+}
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 300px;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+.header-modal {
+    height: 129px;
+    color: #fff;
+    font-size: 30px;
+    background-color: #009688;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.header-modal i {
+    margin-right: 16px;
+}
+.modal-close {
+    position: absolute;
+    color: #fff;
+    padding: 12px;
+    right: 0px;
+}
+.modal-close:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.modal-body {
+    padding: 16px;
+    height: 342px;
+}
+.lable.modal-lable {
+    display: block;
+}
+.buy-tickets {
+    display: block;
+    width: 100%;
+    height: 54px;
+    background-color: #009688;
+    border: none;
+    color: #fff;
+
+}
+input.modal-input {
+    padding: 8px;
+    margin: 15px 0;
+    width: 100%;
+}
+.buy-tickets:hover {
+    opacity: 0.8;
+}
+.modal-footer {
+    padding: 29px 8px;
+    float: right;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+       transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+       transform: translateY(0);
+    }
+}
+
+.contact-section .contact-1  {
+    text-align: left;
+}
+.contact-section .contact-1 p {
+    padding: 6px 0px;
+}
+.contact-1 i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-2 {
+    margin-top: 0px;
+}
+.col-full .contact-introl {
+    width: 100%;
+    padding: 11px 0px;
+    margin-top: 8px;
+}
+.contact-2 .contact-introl {
+    font-size: 15px;
+    padding: 11px 0px;
+
+}
+.contact-3 {
+    padding: 12px 0px;
+}
+input.contact-introl-1 {
+    font-size: 15px;
+    padding: 11px 0px;
+}
+input[type="submit"] {
+    margin-top: 20px;
+    float: right;
+    font-size: 27px;
+    background-color: black;
+    color: white;
+    border: black;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: chartreuse;
+    color: white;
+}
+.map-list {
+    width: 100%;
+}
+.social-section {
+    margin-top: 60px;
+    text-align: center;
+}
+.social-list a {
+    text-decoration: none;
+    font-size: 24px;
+}
+.social-list a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.social-section p {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
