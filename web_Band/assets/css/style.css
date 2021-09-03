@@ -48,6 +48,7 @@ html {
     height: 46px;
     background-color: black;
     z-index: 1;
+    overflow: hidden;
 }
 #nav {
     display: inline-block;
@@ -112,10 +113,10 @@ html {
     height: 100%;
 }
 
-#slider {
+#slider  {
     position: relative;
     margin-top: 46px;
-    padding-top: 50%;
+    padding-top: 57%;
     background: url("/assets/img/slider/slider1.jpg") top center / cover no-repeat;
 
 }
@@ -128,6 +129,8 @@ html {
 }
 #slider .text-heading {
     letter-spacing: 4px;
+    
+   
 
 }
 #slider .text-description {
@@ -138,6 +141,7 @@ html {
 }
 #content .content-0 {
     width: 800px;
+    
     height: 670px;
     margin-left: auto;
     margin-right: auto;

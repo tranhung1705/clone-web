@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clone by hung</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -17,7 +19,7 @@
               <li><a href="#tour">Tour</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
-                  <a href="">
+                  <a href="#">
                       More
                       <i class="down ti-angle-down"></i>
                     </a>
@@ -34,15 +36,16 @@
           <div class="search-btn">
               <id class="search-icon ti-search"></id>
           </div>
-          
-
-          
           <!---and search-button-->
+          <div id="mobile-menu" class="mobile-menu-btn">
+              <i class="menu-icon ti-menu"></i>
+          </div>
 
         </div>
 
         <div id="slider">
             <div class="text-content">
+               
                 <h2 class="text-heading">New York</h2>
                 <p class="text-description">The atmosphere in New York is lorem ipsum.</p>
             </div>
@@ -54,26 +57,22 @@
                 <h2 class="content-1">The Band</h2>
                 <p class="content-2">We love music</p>
                 <p class="content-3">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+               
                 <div class=" row member-list">
-                    <div class=" col col-third text-center">
-                        <p class="membername">Name</p>
-                        <img src="./assets/img/slider/team.jpg" alt="Name" class="member-img">
-                    </div>
-                </div>
-
-                <div class="member-list">
-                    <div class=" col col-third text-center">
-                        <p class="membername">Name</p>
-                        <img src="./assets/img/slider/team.jpg" alt="Name" class="member-img">
-                    </div>
-                </div>
-
-                <div class="member-list">
-                    <div class=" col col-third text-center">
-                        <p class="membername">Name</p>
-                        <img src="./assets/img/slider/team.jpg" alt="Nam" class="member-img">
-                    </div>
+                        <div class="member-item col col-third text-center">
+                            <p class="membername">Name</p>
+                            <img src="./assets/img/slider/team.jpg" alt="Name" class="member-img">
+                        </div>
+                                       
+                        <div class="member-item col col-third text-center">
+                            <p class="membername">Name</p>
+                            <img src="./assets/img/slider/team.jpg" alt="Name" class="member-img">
+                        </div>
+                                   
+                        <div class="member-item col col-third text-center">
+                            <p class="membername">Name</p>
+                            <img src="./assets/img/slider/team.jpg" alt="Nam" class="member-img">
+                        </div>
                 </div>
             </div>
         <!---Tour-->
@@ -245,6 +244,44 @@
        modalclose.addEventListener('click', hideBuyTickets)
     </script>
     
-    
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+       // Đóng/ Mở mobile menu
+       mobileMenu.onclick = function() {
+            var isClosed =header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height ='auto';   
+            } else {
+                header.style.height =null;
+            }
+        }
+        // Khai báo biến header/ mobile/ headerHeight
+        // Đóng/ Mở mobile menu
+        // Khi click vào mobileMenu thì sẽ chạy hàm như sau: 
+            // Khai báo biến isclosed = header.clientHeight bằng với headerHeight (biến True False);
+            // Nếu biến isClosed đúng thì header.style.height ='auto' --> sổ ra 
+            // Nếu biến isClosed sai thì header.style.height = null --> đóng vào 
+
+        // Tự động đóng khi chọn menu\
+        var menuItems =document.querySelectorAll('#nav li a[href*="#"]');
+        for (i=0; i<menuItems.length;i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick =function() {
+                header.style.height =null;
+            }
+        }
+
+        //Khai báo biến menuItems là các thẻ nav li a có chứa dấu #
+        // Chạy vòng lặp for (khai báo biến i=0; nếu i nhỏ hơn số lượng MenuItems; tăng i lên 1) Nếu i thỏa mãn chạy: 
+            // Khai báo biến tạm menuItem = truyền giá trị của menuItems vị trí i vào;
+            // Khi click vào menuItem chạy hàm 
+               //header.style.height =null; --> giấu thanh đi 
+
+        
+
+    </script>
 </body>
 </html>

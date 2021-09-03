@@ -30,13 +30,10 @@
         color: #fff;
     
     }
-    #slider {
-        margin-right: -394px;
-        padding-top: 70%;
-        width: 739px;
-    }
-    .content-0 p {
-        padding: 0 20px;
+    #content .content-1 {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .member-item {
         width: 100%;
@@ -45,10 +42,16 @@
         margin-top: 275px;
     }
     #content .content-3 {
-        padding-right: 78px;
+       
     }
     #content .content-tour1  {
-        width: 739px;
+        width: auto;
+    }
+    #content .content-0 {
+        width: 100%;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media (min-width: 1024px) {
